@@ -1,6 +1,16 @@
 # Conference Deadlines GitHub Page
 
-This is an AI generated static AI-Deadlines-style conference tracker for GitHub Pages.
+This is a static AI-Deadlines-style conference tracker for GitHub Pages.
+
+## What changed in this version
+
+This version automatically handles passed deadlines.
+
+If a conference deadline has passed:
+
+1. If `next_deadline` is available, the card tracks the next edition.
+2. If `next_deadline` is not available, the card displays the next edition as pending.
+3. The card is not simply treated as obsolete.
 
 ## Files
 
@@ -9,52 +19,56 @@ This is an AI generated static AI-Deadlines-style conference tracker for GitHub 
 - `script.js`: sorting, filtering, countdown logic
 - `conferences.json`: conference data
 
-## How to use with GitHub Pages
-
-1. Create a new public GitHub repository, for example `conference-deadlines`.
-2. Upload all files from this folder to the repository root.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Save.
-
-Your site should appear at:
-
-`https://YOUR-USERNAME.github.io/conference-deadlines/`
-
-## Updating conferences
+## How to update a conference when next year's deadline becomes available
 
 Edit `conferences.json`.
 
-Example entry:
+Example:
 
 ```json
 {
-  "name": "NeurIPS",
-  "area": "ML",
-  "deadline": "2026-05-15T23:59:00",
-  "timezone": "AoE",
-  "location": "TBD",
-  "link": "https://neurips.cc",
-  "tags": ["ML", "AI"]
+  "name": "AAAI",
+  "edition": "2026",
+  "deadline": "2025-08-08T23:59:00-12:00",
+  "next_edition": "2027",
+  "next_deadline": null
 }
 ```
 
-To add a new conference, copy one entry, paste it, and change the values.
-
-For deadlines that are not yet announced, use:
+When the 2027 deadline is announced, change only `next_deadline`:
 
 ```json
 {
-  "name": "RLDM",
-  "area": "RL",
-  "deadline": null,
-  "status": "not_announced",
-  "timezone": "",
-  "location": "TBD",
-  "link": "https://rldm.org",
-  "tags": ["RL"]
+  "name": "AAAI",
+  "edition": "2026",
+  "deadline": "2025-08-08T23:59:00-12:00",
+  "next_edition": "2027",
+  "next_deadline": "2026-08-02T23:59:00-12:00"
 }
 ```
+
+After the 2027 deadline passes, you can roll the entry forward manually:
+
+```json
+{
+  "name": "AAAI",
+  "edition": "2027",
+  "deadline": "2026-08-02T23:59:00-12:00",
+  "next_edition": "2028",
+  "next_deadline": null
+}
+```
+
+## Deploy on GitHub Pages
+
+1. Upload all files to the root of your GitHub repository.
+2. Go to **Settings → Pages**.
+3. Choose:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/ root`
+4. Save.
+
+Your site should be available at:
+
+`https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`

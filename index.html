@@ -21,14 +21,20 @@
       </select>
 
       <select id="statusFilter">
-        <option value="upcoming">Upcoming only</option>
+        <option value="actionable">Actionable</option>
         <option value="all">All</option>
-        <option value="past">Past only</option>
+        <option value="announced">Announced deadlines</option>
+        <option value="pending">Next edition pending</option>
+        <option value="past">Past editions</option>
       </select>
     </section>
 
     <section id="conferenceContainer" class="grid"></section>
   </main>
+
+  <footer>
+    <p>Edit <code>conferences.json</code> to add conferences or update next deadlines.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
