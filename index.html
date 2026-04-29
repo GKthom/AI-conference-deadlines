@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Deadlines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Conference Deadlines</h1>
+    <p>Personal tracker for AI, ML, RL, Robotics, Evolutionary Computation, and Artificial Life conferences.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="text" id="search" placeholder="Search conferences...">
+
+      <select id="areaFilter">
+        <option value="all">All areas</option>
+      </select>
+
+      <select id="statusFilter">
+        <option value="upcoming">Upcoming only</option>
+        <option value="all">All</option>
+        <option value="past">Past only</option>
+      </select>
+    </section>
+
+    <section id="conferenceContainer" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>Edit <code>conferences.json</code> to add conferences or update deadlines.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

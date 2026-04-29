@@ -1,0 +1,187 @@
+[
+  {
+    "name": "NeurIPS",
+    "area": "ML",
+    "deadline": "2026-05-15T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://neurips.cc",
+    "tags": [
+      "ML",
+      "AI"
+    ]
+  },
+  {
+    "name": "ICLR",
+    "area": "ML",
+    "deadline": "2026-09-30T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://iclr.cc",
+    "tags": [
+      "ML",
+      "Deep Learning"
+    ]
+  },
+  {
+    "name": "ICML",
+    "area": "ML",
+    "deadline": "2026-01-30T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://icml.cc",
+    "tags": [
+      "ML"
+    ]
+  },
+  {
+    "name": "AAMAS",
+    "area": "AI / Multi-Agent Systems",
+    "deadline": "2025-10-15T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://aamas.org",
+    "tags": [
+      "MAS",
+      "RL"
+    ]
+  },
+  {
+    "name": "IJCAI-ECAI",
+    "area": "AI",
+    "deadline": "2026-01-28T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://ijcai.org",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "name": "AAAI",
+    "area": "AI",
+    "deadline": "2025-08-15T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://aaai.org",
+    "tags": [
+      "AI"
+    ]
+  },
+  {
+    "name": "CoRL",
+    "area": "Robotics",
+    "deadline": "2026-02-12T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://www.corl.org",
+    "tags": [
+      "Robotics",
+      "RL"
+    ]
+  },
+  {
+    "name": "ICRA",
+    "area": "Robotics",
+    "deadline": "2025-09-15T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra",
+    "tags": [
+      "Robotics"
+    ]
+  },
+  {
+    "name": "IROS",
+    "area": "Robotics",
+    "deadline": "2026-03-01T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+    "tags": [
+      "Robotics"
+    ]
+  },
+  {
+    "name": "RLDM",
+    "area": "RL",
+    "deadline": null,
+    "status": "not_announced",
+    "timezone": "",
+    "location": "TBD",
+    "link": "https://rldm.org",
+    "tags": [
+      "RL",
+      "Decision Making"
+    ]
+  },
+  {
+    "name": "RLC",
+    "area": "RL",
+    "deadline": "2026-02-06T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://rl-conference.cc",
+    "tags": [
+      "RL"
+    ]
+  },
+  {
+    "name": "ECML PKDD",
+    "area": "ML",
+    "deadline": "2026-03-12T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://ecmlpkdd.org",
+    "tags": [
+      "ML",
+      "Data Mining"
+    ]
+  },
+  {
+    "name": "ECAI",
+    "area": "AI",
+    "deadline": "2026-01-28T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://ecai2026.org",
+    "tags": [
+      "AI",
+      "Joint with IJCAI"
+    ]
+  },
+  {
+    "name": "ICPR",
+    "area": "Pattern Recognition",
+    "deadline": "2026-01-10T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://iapr.org",
+    "tags": [
+      "Computer Vision",
+      "Pattern Recognition"
+    ]
+  },
+  {
+    "name": "GECCO",
+    "area": "Evolutionary Computation",
+    "deadline": "2026-01-29T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://gecco-2026.sigevo.org",
+    "tags": [
+      "Evolutionary Computation"
+    ]
+  },
+  {
+    "name": "ALIFE",
+    "area": "Artificial Life",
+    "deadline": "2026-03-01T23:59:00",
+    "timezone": "AoE",
+    "location": "TBD",
+    "link": "https://isal-alife.org",
+    "tags": [
+      "Artificial Life"
+    ]
+  }
+]
