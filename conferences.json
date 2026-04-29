@@ -2,7 +2,10 @@
   {
     "name": "NeurIPS",
     "area": "ML",
-    "deadline": "2026-05-15T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-05-15T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://neurips.cc",
@@ -14,7 +17,10 @@
   {
     "name": "ICLR",
     "area": "ML",
-    "deadline": "2026-09-30T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-09-30T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://iclr.cc",
@@ -26,9 +32,12 @@
   {
     "name": "ICML",
     "area": "ML",
-    "deadline": "2026-01-30T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-01-28T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": "2026-07-31T23:59:00-12:00",
     "timezone": "AoE",
-    "location": "TBD",
+    "location": "South America",
     "link": "https://icml.cc",
     "tags": [
       "ML"
@@ -37,7 +46,10 @@
   {
     "name": "AAMAS",
     "area": "AI / Multi-Agent Systems",
-    "deadline": "2025-10-15T23:59:00",
+    "edition": "2026",
+    "deadline": "2025-10-08T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": "2026-10-02T23:59:00-12:00",
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://aamas.org",
@@ -49,9 +61,12 @@
   {
     "name": "IJCAI-ECAI",
     "area": "AI",
-    "deadline": "2026-01-28T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-01-19T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
-    "location": "TBD",
+    "location": "Bremen, Germany",
     "link": "https://ijcai.org",
     "tags": [
       "AI"
@@ -60,10 +75,13 @@
   {
     "name": "AAAI",
     "area": "AI",
-    "deadline": "2025-08-15T23:59:00",
+    "edition": "2026",
+    "deadline": "2025-08-08T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
-    "location": "TBD",
-    "link": "https://aaai.org",
+    "location": "Montr\u00e9al, Canada",
+    "link": "https://aaai.org/conference/aaai/",
     "tags": [
       "AI"
     ]
@@ -71,7 +89,10 @@
   {
     "name": "CoRL",
     "area": "Robotics",
-    "deadline": "2026-02-12T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-02-12T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://www.corl.org",
@@ -83,10 +104,13 @@
   {
     "name": "ICRA",
     "area": "Robotics",
-    "deadline": "2025-09-15T23:59:00",
-    "timezone": "AoE",
-    "location": "TBD",
-    "link": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra",
+    "edition": "2026",
+    "deadline": "2025-09-15T23:59:00-07:00",
+    "next_edition": "2027",
+    "next_deadline": null,
+    "timezone": "Pacific time",
+    "location": "Seoul, Korea",
+    "link": "https://2027.ieee-icra.org/",
     "tags": [
       "Robotics"
     ]
@@ -94,7 +118,10 @@
   {
     "name": "IROS",
     "area": "Robotics",
-    "deadline": "2026-03-01T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-03-01T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": "2027-03-01T23:59:00-12:00",
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
@@ -105,7 +132,10 @@
   {
     "name": "RLDM",
     "area": "RL",
+    "edition": "2026",
     "deadline": null,
+    "next_edition": "Next edition",
+    "next_deadline": null,
     "status": "not_announced",
     "timezone": "",
     "location": "TBD",
@@ -118,7 +148,10 @@
   {
     "name": "RLC",
     "area": "RL",
-    "deadline": "2026-02-06T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-02-06T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://rl-conference.cc",
@@ -129,7 +162,10 @@
   {
     "name": "ECML PKDD",
     "area": "ML",
-    "deadline": "2026-03-12T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-03-12T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://ecmlpkdd.org",
@@ -141,10 +177,13 @@
   {
     "name": "ECAI",
     "area": "AI",
-    "deadline": "2026-01-28T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-01-19T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
-    "location": "TBD",
-    "link": "https://ecai2026.org",
+    "location": "Bremen, Germany",
+    "link": "https://ecai2026.eu",
     "tags": [
       "AI",
       "Joint with IJCAI"
@@ -153,7 +192,10 @@
   {
     "name": "ICPR",
     "area": "Pattern Recognition",
-    "deadline": "2026-01-10T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-01-10T23:59:00-12:00",
+    "next_edition": "2028",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://iapr.org",
@@ -165,7 +207,10 @@
   {
     "name": "GECCO",
     "area": "Evolutionary Computation",
-    "deadline": "2026-01-29T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-01-29T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://gecco-2026.sigevo.org",
@@ -176,7 +221,10 @@
   {
     "name": "ALIFE",
     "area": "Artificial Life",
-    "deadline": "2026-03-01T23:59:00",
+    "edition": "2026",
+    "deadline": "2026-03-01T23:59:00-12:00",
+    "next_edition": "2027",
+    "next_deadline": null,
     "timezone": "AoE",
     "location": "TBD",
     "link": "https://isal-alife.org",
