@@ -1,6 +1,6 @@
 # Conference Deadlines GitHub Page
 
-This is a static AI-Deadlines-style conference tracker for GitHub Pages.
+This is an AI generated static AI-Deadlines-style conference tracker for GitHub Pages.
 
 ## Files
 
