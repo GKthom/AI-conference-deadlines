@@ -13,13 +13,6 @@ It also includes a `core_rank` field and a CORE filter:
 - `B`
 - `unknown`
 
-## Important correction
-
-ICML 2026 is set to the official **main-track full paper submission deadline**:
-
-`2026-01-28T23:59:00-12:00`
-
-Since this has passed, the site will show ICML as tracking the 2027 edition with the deadline pending, unless you later enter a confirmed `next_deadline`.
 
 ## How passed deadlines work
 
