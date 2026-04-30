@@ -9,15 +9,23 @@
 <body>
   <header>
     <h1>Conference Deadlines</h1>
-    <p>Personal tracker for AI, ML, RL, Robotics, Evolutionary Computation, and Artificial Life conferences.</p>
+    <p>Main-track paper submission deadlines for selected AI, ML, RL, Robotics, Evolutionary Computation, and Artificial Life conferences.</p>
   </header>
 
   <main>
     <section class="controls">
-      <input type="text" id="search" placeholder="Search conferences...">
+      <input type="text" id="search" placeholder="Search conferences, tags, areas...">
 
       <select id="areaFilter">
         <option value="all">All areas</option>
+      </select>
+
+      <select id="coreFilter">
+        <option value="all">All CORE ranks</option>
+        <option value="A*">CORE A*</option>
+        <option value="A">CORE A</option>
+        <option value="B">CORE B</option>
+        <option value="unknown">Unranked / unknown</option>
       </select>
 
       <select id="statusFilter">
@@ -33,7 +41,7 @@
   </main>
 
   <footer>
-    <p>Edit <code>conferences.json</code> to add conferences or update next deadlines.</p>
+    <p>Edit <code>conferences.json</code> to add conferences or update next main-track deadlines.</p>
   </footer>
 
   <script src="script.js"></script>

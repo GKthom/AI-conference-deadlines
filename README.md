@@ -2,62 +2,32 @@
 
 This is a static AI-Deadlines-style conference tracker for GitHub Pages.
 
-## What changed in this version
+## Focus
 
-This version automatically handles passed deadlines.
+This version tracks **main-track conference paper submission deadlines**, not conference dates.
 
-If a conference deadline has passed:
+It also includes a `core_rank` field and a CORE filter:
 
-1. If `next_deadline` is available, the card tracks the next edition.
-2. If `next_deadline` is not available, the card displays the next edition as pending.
-3. The card is not simply treated as obsolete.
+- `A*`
+- `A`
+- `B`
+- `unknown`
 
-## Files
+## Important correction
 
-- `index.html`: webpage structure
-- `style.css`: visual styling
-- `script.js`: sorting, filtering, countdown logic
-- `conferences.json`: conference data
+ICML 2026 is set to the official **main-track full paper submission deadline**:
 
-## How to update a conference when next year's deadline becomes available
+`2026-01-28T23:59:00-12:00`
 
-Edit `conferences.json`.
+Since this has passed, the site will show ICML as tracking the 2027 edition with the deadline pending, unless you later enter a confirmed `next_deadline`.
 
-Example:
+## How passed deadlines work
 
-```json
-{
-  "name": "AAAI",
-  "edition": "2026",
-  "deadline": "2025-08-08T23:59:00-12:00",
-  "next_edition": "2027",
-  "next_deadline": null
-}
-```
+If a deadline has passed:
 
-When the 2027 deadline is announced, change only `next_deadline`:
-
-```json
-{
-  "name": "AAAI",
-  "edition": "2026",
-  "deadline": "2025-08-08T23:59:00-12:00",
-  "next_edition": "2027",
-  "next_deadline": "2026-08-02T23:59:00-12:00"
-}
-```
-
-After the 2027 deadline passes, you can roll the entry forward manually:
-
-```json
-{
-  "name": "AAAI",
-  "edition": "2027",
-  "deadline": "2026-08-02T23:59:00-12:00",
-  "next_edition": "2028",
-  "next_deadline": null
-}
-```
+1. If `next_deadline` is filled in, the card tracks the next edition.
+2. If `next_deadline` is `null`, the card shows the next edition as pending.
+3. The card remains visible under "Actionable" because it is still useful for monitoring the next cycle.
 
 ## Deploy on GitHub Pages
 

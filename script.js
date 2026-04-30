@@ -3,6 +3,7 @@ let conferences = [];
 const container = document.getElementById("conferenceContainer");
 const searchInput = document.getElementById("search");
 const areaFilter = document.getElementById("areaFilter");
+const coreFilter = document.getElementById("coreFilter");
 const statusFilter = document.getElementById("statusFilter");
 
 fetch("conferences.json")
@@ -27,19 +28,11 @@ function getPrimaryDeadline(conf) {
   const now = new Date();
 
   if (current && current >= now) {
-    return {
-      date: current,
-      edition: conf.edition || "",
-      mode: "current"
-    };
+    return { date: current, edition: conf.edition || "", mode: "current" };
   }
 
   if (next) {
-    return {
-      date: next,
-      edition: conf.next_edition || "Next edition",
-      mode: "next_known"
-    };
+    return { date: next, edition: conf.next_edition || "Next edition", mode: "next_known" };
   }
 
   return {
@@ -78,30 +71,16 @@ function getCountdown(conf) {
   const primary = getPrimaryDeadline(conf);
 
   if (!primary.date) {
-    return {
-      text: `${primary.edition}: deadline not announced`,
-      className: "pending"
-    };
+    return { text: `${primary.edition}: main-track deadline not announced`, className: "pending" };
   }
 
   const days = getDaysLeft(primary.date);
   const editionLabel = primary.edition ? `${primary.edition}: ` : "";
 
-  if (days < 0) {
-    return { text: "Passed", className: "past" };
-  }
-
-  if (days === 0) {
-    return { text: `${editionLabel}Due today`, className: "urgent" };
-  }
-
-  if (days <= 7) {
-    return { text: `${editionLabel}Due in ${days} days`, className: "urgent" };
-  }
-
-  if (days <= 30) {
-    return { text: `${editionLabel}Due in ${days} days`, className: "soon" };
-  }
+  if (days < 0) return { text: "Passed", className: "past" };
+  if (days === 0) return { text: `${editionLabel}Due today`, className: "urgent" };
+  if (days <= 7) return { text: `${editionLabel}Due in ${days} days`, className: "urgent" };
+  if (days <= 30) return { text: `${editionLabel}Due in ${days} days`, className: "soon" };
 
   return { text: `${editionLabel}Due in ${days} days`, className: "safe" };
 }
@@ -131,20 +110,20 @@ function populateAreaFilter() {
 function renderConferences() {
   const search = searchInput.value.toLowerCase();
   const area = areaFilter.value;
+  const core = coreFilter.value;
   const status = statusFilter.value;
 
   let visible = conferences
     .filter(conf => {
-      const haystack = [
-        conf.name,
-        conf.area,
-        conf.location,
-        ...(conf.tags || [])
-      ].join(" ").toLowerCase();
-
+      const haystack = [conf.name, conf.area, conf.location, conf.core_rank, ...(conf.tags || [])].join(" ").toLowerCase();
       return haystack.includes(search);
     })
     .filter(conf => area === "all" || conf.area === area)
+    .filter(conf => {
+      if (core === "all") return true;
+      if (core === "unknown") return !conf.core_rank || conf.core_rank === "unknown";
+      return conf.core_rank === core;
+    })
     .filter(conf => {
       const confStatus = getConferenceStatus(conf);
       if (status === "all") return true;
@@ -177,12 +156,13 @@ function renderConferences() {
     const primary = getPrimaryDeadline(conf);
     const tags = conf.tags || [];
     const edition = primary.edition || conf.edition || "";
+    const coreRank = conf.core_rank && conf.core_rank !== "unknown" ? `CORE ${conf.core_rank}` : "CORE not listed/unknown";
 
     let note = "";
     if (primary.mode === "next_pending") {
-      note = `<p class="note">The listed deadline has passed. This card is now tracking ${edition}, but the next deadline has not been entered yet.</p>`;
+      note = `<p class="note">The listed main-track deadline has passed. This card is now tracking ${edition}, but the next main-track submission deadline has not been entered yet.</p>`;
     } else if (primary.mode === "next_known") {
-      note = `<p class="note">The previous listed deadline has passed, so this card is now tracking the next known edition.</p>`;
+      note = `<p class="note">The previous listed main-track deadline has passed, so this card is now tracking the next known edition.</p>`;
     }
 
     const card = document.createElement("article");
@@ -192,10 +172,12 @@ function renderConferences() {
       <h2>${conf.name}${edition ? " " + edition : ""}</h2>
       <p class="meta">${conf.area || "General"} · ${conf.location || "Location TBA"}</p>
       <div class="badges">
+        <span class="badge core-badge">${coreRank}</span>
+        <span class="badge deadline-type">${conf.deadline_type || "Main-track paper"}</span>
         ${tags.map(tag => `<span class="badge">${tag}</span>`).join("")}
       </div>
       <p class="countdown ${countdown.className}">${countdown.text}</p>
-      <p><strong>Deadline:</strong> ${formatDeadline(conf)} ${conf.timezone ? `(${conf.timezone})` : ""}</p>
+      <p><strong>Main-track deadline:</strong> ${formatDeadline(conf)} ${conf.timezone ? `(${conf.timezone})` : ""}</p>
       ${note}
       <p><a href="${conf.link}" target="_blank" rel="noopener noreferrer">Conference website</a></p>
     `;
@@ -206,4 +188,5 @@ function renderConferences() {
 
 searchInput.addEventListener("input", renderConferences);
 areaFilter.addEventListener("change", renderConferences);
+coreFilter.addEventListener("change", renderConferences);
 statusFilter.addEventListener("change", renderConferences);
